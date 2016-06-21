@@ -1,5 +1,5 @@
-log.log: src.src ./exe.exe
-	./exe.exe < $< > $@ && tail $(TAIL) $@
+log.log: src.src ./exe.exe grammar
+	./exe.exe grammar < $< > $@ && tail $(TAIL) $@
 C = cpp.cpp
 H =
 ./exe.exe: $(C) $(H)
